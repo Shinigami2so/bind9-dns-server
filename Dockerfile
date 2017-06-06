@@ -14,5 +14,5 @@ RUN chmod -R 775 /etc/bind
 COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
 EXPOSE 53/udp 53/tcp
+VOLUME ["/etc/bind"]
 ENTRYPOINT ["/sbin/entrypoint.sh"]
-VOLUME /etc/bind
